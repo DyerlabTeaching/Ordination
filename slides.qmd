@@ -148,8 +148,10 @@ names( fit.pca )
 fit.pca$loadings[,1]
 ```
 
-```{r}
+## Loadings
 
+```{r}
+#| echo: false
 data.frame( Variable = colnames(mv_genos), 
             Loading = fit.pca$loadings[,1] ) |> 
   ggplot( aes(Variable, Loading) ) + 
@@ -161,9 +163,10 @@ data.frame( Variable = colnames(mv_genos),
 
 ```
 
-## Orthoginal
+## Orthoginal Axes
 
 ```{r}
+#| echo: false
 data.frame( Variable = c( colnames(mv_genos), 
                           colnames(mv_genos)),
             Loading = c( fit.pca$loadings[,1],
