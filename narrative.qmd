@@ -1,20 +1,21 @@
 ---
-title: "Narrative Title"
+title: "Ordination Techniques"
 format: html
 ---
 
 Ordination is a technique to take high-dimensional data and to represent it in a lower dimensional context.  
 
 ```{r setup, include=FALSE}
-library( rgl )
-knitr::knit_hooks$set( webgl = hook_webgl )
-knitr::opts_chunk$set( echo = TRUE, 
-                       fig.align = "center", 
-                       fig.width = 6, 
-                       fig.height=5, 
-                       warning=FALSE, 
-                       message=FALSE)
+#library( rgl )
+#knitr::knit_hooks$set( webgl = hook_webgl )
+#knitr::opts_chunk$set( echo = TRUE, 
+#                       fig.align = "center", 
+#                       fig.width = 6, 
+#                       fig.height=5, 
+#                       warning=FALSE, 
+#                       message=FALSE)
 library( tidyverse )
+
 theme_set( theme_bw( base_size = 18) )
 ```
 
@@ -26,7 +27,7 @@ For this activity, I am going to use the beer styles as a data set in explaining
 
 ```{r}
 url <- "https://raw.githubusercontent.com/dyerlab/ENVS-Lectures/master/data/Beer_Styles.csv"
-read_csv( url ) %>%
+read_csv( url ) |>
   mutate( Yeast = as.factor( Yeast ) ) -> data
 summary(data)
 ```
@@ -34,12 +35,12 @@ summary(data)
 These data give ranges of values but it is probably easier if we just take the midpoint of the range.
 
 ```{r}
-data %>%
+data |>
   mutate( ABV=( ABV_Max+ABV_Min)/2,
           IBU=( IBU_Max+IBU_Min)/2,
           SRM=( SRM_Max+SRM_Min)/2,
           OG=( OG_Max+OG_Min)/2,
-          FG=( FG_Max+FG_Min)/2 )  %>%
+          FG=( FG_Max+FG_Min)/2 )  |>
   select( Styles, Yeast, ABV, IBU, SRM, OG, FG) -> beers
 summary( beers)
 ```
