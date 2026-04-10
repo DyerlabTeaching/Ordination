@@ -108,14 +108,15 @@ ggplot( predicted ) +
 
 ```
 
-## Principal Coordinate Analyses (PCoA)
-
-
-
-
 
 
 ## Non-metric Multiple Dimensional Scaling (NMDS)
+
+Nonmetric Multidimensional Scaling (NMDS) is a robust, iterative ordination technique used in community ecology and multivariate statistics to visualize dissimilarities among samples in a reduced-dimensional space. Unlike metric approaches such as Principal Components Analysis (PCA), which assume linear relationships and preserve Euclidean distances, NMDS is **non-parametric** and relies on the rank order of distances. This makes it particularly effective for ecological datasets characterized by non-normal distributions, high numbers of zeros, and non-linear species responses. The goal of NMDS is to collapse information from multiple variables—often species abundances—into a two- or three-dimensional map where the distance between points reflects their biotic or abiotic similarity as closely as possible.
+
+The configuration is achieved by minimizing a "stress" value, a goodness-of-fit metric that represents the mismatch between the ranks of the distances in the original high-dimensional space and the ranks in the final ordination. Because NMDS is not an eigenvalue-based method, the axes are arbitrary and do not explain a specific percentage of variance; instead, the entire configuration is rotated to maximize the variance explained by the first axis for interpretability. Successful NMDS requires careful selection of an appropriate distance measure (such as Bray-Curtis) and multiple restarts from different random configurations to avoid being trapped in local stress minima.
+
+Here is an example using the beer styles dataset.
 
 ```{r}
 library( vegan )
@@ -124,11 +125,6 @@ beers %>%
   metaMDS( trace = FALSE ) %>%
   ordiplot( )
 ```
-
-
-
-## Using Rotated Data
-
 
 
 
