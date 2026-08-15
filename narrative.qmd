@@ -21,7 +21,7 @@ theme_set( theme_bw( base_size = 18) )
 
 > Ordination is a collective term for multivariate techniques which summarize a multidimensional dataset in such a way that when it is projected onto a low dimensional space, any intrinsic pattern the data may possess becomes apparent upon visual inspection[^1].
 
-One of the largest challenges in data analysis is the ability to understand and gain inferences from it!  This is especially compounded when we have many different kinds of data describing our individual observations.  For example, at a particular vernal pool, we may have measured pool size, pool depth, elevation, rainfall, temperature, canopy cover, pH, aquatic vegitation, species1 density, species2 density, etc.  To describe all of these variables we could either plot all combinations of them *or* be a bit clever and use some ordination approaches.
+One of the largest challenges in data analysis is the ability to understand and gain inferences from it!  This is especially compounded when we have many different kinds of data describing our individual observations.  For example, at a particular vernal pool, we may have measured pool size, pool depth, elevation, rainfall, temperature, canopy cover, pH, aquatic vegetation, species1 density, species2 density, etc.  To describe all of these variables we could either plot all combinations of them *or* be a bit clever and use some ordination approaches.
 
 For this activity, I am going to use the beer styles as a data set in explaining a couple of different types of ordination.  It is available as the raw CSV file.
 
@@ -45,7 +45,7 @@ data |>
 summary( beers)
 ```
 
-Excellent.  If we look a the data now, we can see that there are a moderate amount of correlation between data types and all of the characteristics are spread reasonably well across the Yeast types.  Here is a pairwise plot of all the data using the `GGally::ggpairs()` function.
+Excellent.  If we look at the data now, we can see that there is a moderate amount of correlation between data types and all of the characteristics are spread reasonably well across the Yeast types.  Here is a pairwise plot of all the data using the `GGally::ggpairs()` function.
 
 ```{r message=FALSE, warning=FALSE}
 library(GGally)
@@ -56,18 +56,18 @@ beers %>%
 
 
 
-## Principle Component Analyses
+## Principal Component Analyses
 
-Principle component analysis (PCA) is a translation of the original data into new coordinate spaces.  This has absolutely nothing to do with the relationship among the data themselves but is more of a way to create new coordinates for each data point under the following criteria:  
-1. The number of axes in the translated data are the same as the number of axes in the original data.
+Principal component analysis (PCA) is a translation of the original data into new coordinate spaces.  This has absolutely nothing to do with the relationship among the data themselves but is more of a way to create new coordinates for each data point under the following criteria:  
+1. The number of axes in the translated data is the same as the number of axes in the original data.
 2. Axes are chosen by taking all the data and finding transects through it that account for the broadest variation in the data.
 3. Each axis is defined as a linear combination of the original axes.
-3. Subsequent axes *must be* orthoganal to all previous ones (e.g., at 90$\deg$ angles).
-4. The amount of the total variation in the system can be partitioned by these new axes and they are ordered from those that explain the most variation to those who explain the least.
+3. Subsequent axes *must be* orthogonal to all previous ones (e.g., at 90$\deg$ angles).
+4. The amount of the total variation in the system can be partitioned by these new axes and they are ordered from those that explain the most variation to those that explain the least.
 
-An exmaple of this rotation is given below.
+An example of this rotation is given below.
 
-![A rotation of 2-dimenational data from the original coordinate space (represented by the x- and y-axes) onto synthetic principal component (the red axes). The rotation itself maximizes the distributional width of the data (depicted as density plots in grey for the original axes and red for the rotated axes).](https://live.staticflickr.com/65535/50613620086_2d1f9ca6dd_c_d.jpg)
+![A rotation of 2-dimensional data from the original coordinate space (represented by the x- and y-axes) onto synthetic principal component (the red axes). The rotation itself maximizes the distributional width of the data (depicted as density plots in grey for the original axes and red for the rotated axes).](https://live.staticflickr.com/65535/50613620086_2d1f9ca6dd_c_d.jpg)
 
 To conduct this rotation on our data, we use the function `prcomp()`.  It does the rotation and returns an analysis object that has all the information we need in it.
 
@@ -88,7 +88,7 @@ We can plot these and by default it shows the variation explained by each axis.
 plot( pc.fit )
 ```
 
-This rotation seems to be able to produce axes that account for a lot of the underyling variation.  Here is a synopsis:
+This rotation seems to be able to produce axes that account for a lot of the underlying variation.  Here is a synopsis:
 
 ```{r}
 format( pc.fit$sdev / sum( pc.fit$sdev ), digits=3)
@@ -96,7 +96,7 @@ format( pc.fit$sdev / sum( pc.fit$sdev ), digits=3)
 
 So, the first axis describes 63% of the variation and the second describes 31%, etc.
 
-We can plot the original data points, projected into this new coordiante space.
+We can plot the original data points, projected into this new coordinate space.
 
 ```{r}
 data.frame( predict( pc.fit )) %>%
@@ -110,7 +110,7 @@ ggplot( predicted ) +
 
 
 
-## Non-metric Multiple Dimensional Scaling (NMDS)
+## Non-metric Multidimensional Scaling (NMDS)
 
 Nonmetric Multidimensional Scaling (NMDS) is a robust, iterative ordination technique used in community ecology and multivariate statistics to visualize dissimilarities among samples in a reduced-dimensional space. Unlike metric approaches such as Principal Components Analysis (PCA), which assume linear relationships and preserve Euclidean distances, NMDS is **non-parametric** and relies on the rank order of distances. This makes it particularly effective for ecological datasets characterized by non-normal distributions, high numbers of zeros, and non-linear species responses. The goal of NMDS is to collapse information from multiple variables—often species abundances—into a two- or three-dimensional map where the distance between points reflects their biotic or abiotic similarity as closely as possible.
 
@@ -129,5 +129,5 @@ beers %>%
 
 
 
-[^1]: Pielou EC, (1984) The interpretation of ecological data: A primer on classification and ordination.  288pg. ISBN: ![978-0-471-88950-2](https://www.wiley.com/en-us/The+Interpretation+of+Ecological+Data%3A+A+Primer+on+Classification+and+Ordination-p-9780471889502)
+[^1]: Pielou EC, (1984) The interpretation of ecological data: A primer on classification and ordination.  288pg. ISBN: [978-0-471-88950-2](https://www.wiley.com/en-us/The+Interpretation+of+Ecological+Data%3A+A+Primer+on+Classification+and+Ordination-p-9780471889502)
 

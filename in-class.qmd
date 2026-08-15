@@ -11,18 +11,3 @@ format:
 
 This in-class file is used for demonstrating individual examples related to this topic and is kept as a persistent record of examples provided during lectures.
 
-## The Data
-
-
-## Vectors
-
-## Matrices
-
-## Lists
-
-## Data Frames
-
-
-
-
-
