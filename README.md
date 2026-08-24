@@ -30,6 +30,14 @@ Methods for dimensional reductions.
 - [Narrative](https://dyerlabteaching.github.io/Ordination/narrative.html)
 - [Data Set](https://raw.githubusercontent.com/DyerlabTeaching/Ordination/refs/heads/main/mv_genos.csv)
 
+## Assessment
+
+- A [homework](https://dyerlabteaching.github.io/Ordination/homework.html) assignment on the topic.
+
+## Logistics
+
+- A [Teaching Log](https://dyerlabteaching.github.io/Ordination/log.html) record of delivery and notes.
+
 ## Contact Information
 
 If you need to contact me, I am available at:
