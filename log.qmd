@@ -5,6 +5,9 @@ format: html
 
 > Daily updates on progress for the course in each section.
 
+## 2026-08-24
+
+- `narrative.qmd`'s setup chunk has a commented-out `library(rgl)` block (3D plotting + `webgl` knitr hook) that was never re-enabled. Left disabled during this render pass because `rgl` requires the X11 subsystem, which isn't available in this environment. **TODO:** either install XQuartz/X11 and re-enable this block, or replace the 3D visualization with a non-`rgl` alternative (e.g. `plotly`) that doesn't need X11.
 
 ## Copy-Edit Log — Ordination
 

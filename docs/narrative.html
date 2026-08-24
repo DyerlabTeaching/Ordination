@@ -152,27 +152,27 @@ dbl (10): ABV_Min, ABV_Max, IBU_Min, IBU_Max, SRM_Min, SRM_Max, OG_Min, OG_M...
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       Styles       Yeast       ABV_Min         ABV_Max          IBU_Min     
- Length   :100   Ale   :69   Min.   :2.400   Min.   : 3.200   Min.   : 0.00  
- N.unique :100   Either: 4   1st Qu.:4.200   1st Qu.: 5.475   1st Qu.:15.00  
- N.blank  :  0   Lager :27   Median :4.600   Median : 6.000   Median :20.00  
- Min.nchar:  4               Mean   :4.947   Mean   : 6.768   Mean   :21.97  
- Max.nchar: 27               3rd Qu.:5.500   3rd Qu.: 8.000   3rd Qu.:25.00  
-                             Max.   :9.000   Max.   :14.000   Max.   :60.00  
-    IBU_Max          SRM_Min         SRM_Max          OG_Min     
- Min.   :  8.00   Min.   : 2.00   Min.   : 3.00   Min.   :1.026  
- 1st Qu.: 25.00   1st Qu.: 3.50   1st Qu.: 7.00   1st Qu.:1.040  
- Median : 35.00   Median : 8.00   Median :17.00   Median :1.046  
- Mean   : 38.98   Mean   : 9.82   Mean   :17.76   Mean   :1.049  
- 3rd Qu.: 45.00   3rd Qu.:14.00   3rd Qu.:22.00   3rd Qu.:1.056  
- Max.   :120.00   Max.   :30.00   Max.   :40.00   Max.   :1.080  
-     OG_Max          FG_Min          FG_Max     
- Min.   :1.032   Min.   :0.998   Min.   :1.006  
- 1st Qu.:1.052   1st Qu.:1.008   1st Qu.:1.012  
- Median :1.060   Median :1.010   Median :1.015  
- Mean   :1.065   Mean   :1.009   Mean   :1.016  
- 3rd Qu.:1.075   3rd Qu.:1.010   3rd Qu.:1.018  
- Max.   :1.130   Max.   :1.020   Max.   :1.040  </code></pre>
+<pre><code>    Styles             Yeast       ABV_Min         ABV_Max      
+ Length:100         Ale   :69   Min.   :2.400   Min.   : 3.200  
+ Class :character   Either: 4   1st Qu.:4.200   1st Qu.: 5.475  
+ Mode  :character   Lager :27   Median :4.600   Median : 6.000  
+                                Mean   :4.947   Mean   : 6.768  
+                                3rd Qu.:5.500   3rd Qu.: 8.000  
+                                Max.   :9.000   Max.   :14.000  
+    IBU_Min         IBU_Max          SRM_Min         SRM_Max     
+ Min.   : 0.00   Min.   :  8.00   Min.   : 2.00   Min.   : 3.00  
+ 1st Qu.:15.00   1st Qu.: 25.00   1st Qu.: 3.50   1st Qu.: 7.00  
+ Median :20.00   Median : 35.00   Median : 8.00   Median :17.00  
+ Mean   :21.97   Mean   : 38.98   Mean   : 9.82   Mean   :17.76  
+ 3rd Qu.:25.00   3rd Qu.: 45.00   3rd Qu.:14.00   3rd Qu.:22.00  
+ Max.   :60.00   Max.   :120.00   Max.   :30.00   Max.   :40.00  
+     OG_Min          OG_Max          FG_Min          FG_Max     
+ Min.   :1.026   Min.   :1.032   Min.   :0.998   Min.   :1.006  
+ 1st Qu.:1.040   1st Qu.:1.052   1st Qu.:1.008   1st Qu.:1.012  
+ Median :1.046   Median :1.060   Median :1.010   Median :1.015  
+ Mean   :1.049   Mean   :1.065   Mean   :1.009   Mean   :1.016  
+ 3rd Qu.:1.056   3rd Qu.:1.075   3rd Qu.:1.010   3rd Qu.:1.018  
+ Max.   :1.080   Max.   :1.130   Max.   :1.020   Max.   :1.040  </code></pre>
 </div>
 </div>
 <p>These data give ranges of values but it is probably easier if we just take the midpoint of the range.</p>
@@ -186,20 +186,20 @@ dbl (10): ABV_Min, ABV_Max, IBU_Min, IBU_Max, SRM_Min, SRM_Max, OG_Min, OG_M...
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>( Styles, Yeast, ABV, IBU, SRM, OG, FG) <span class="ot">-&gt;</span> beers</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>( beers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       Styles       Yeast         ABV              IBU             SRM       
- Length   :100   Ale   :69   Min.   : 2.850   Min.   : 5.00   Min.   : 2.50  
- N.unique :100   Either: 4   1st Qu.: 4.900   1st Qu.:21.38   1st Qu.: 5.00  
- N.blank  :  0   Lager :27   Median : 5.300   Median :26.25   Median :12.75  
- Min.nchar:  4               Mean   : 5.857   Mean   :30.48   Mean   :13.79  
- Max.nchar: 27               3rd Qu.: 6.750   3rd Qu.:37.50   3rd Qu.:18.00  
-                             Max.   :11.500   Max.   :90.00   Max.   :35.00  
-       OG              FG       
- Min.   :1.030   Min.   :1.003  
- 1st Qu.:1.047   1st Qu.:1.010  
- Median :1.052   Median :1.012  
- Mean   :1.057   Mean   :1.013  
- 3rd Qu.:1.065   3rd Qu.:1.014  
- Max.   :1.100   Max.   :1.029  </code></pre>
+<pre><code>    Styles             Yeast         ABV              IBU       
+ Length:100         Ale   :69   Min.   : 2.850   Min.   : 5.00  
+ Class :character   Either: 4   1st Qu.: 4.900   1st Qu.:21.38  
+ Mode  :character   Lager :27   Median : 5.300   Median :26.25  
+                                Mean   : 5.857   Mean   :30.48  
+                                3rd Qu.: 6.750   3rd Qu.:37.50  
+                                Max.   :11.500   Max.   :90.00  
+      SRM              OG              FG       
+ Min.   : 2.50   Min.   :1.030   Min.   :1.003  
+ 1st Qu.: 5.00   1st Qu.:1.047   1st Qu.:1.010  
+ Median :12.75   Median :1.052   Median :1.012  
+ Mean   :13.79   Mean   :1.057   Mean   :1.013  
+ 3rd Qu.:18.00   3rd Qu.:1.065   3rd Qu.:1.014  
+ Max.   :35.00   Max.   :1.100   Max.   :1.029  </code></pre>
 </div>
 </div>
 <p>Excellent. If we look at the data now, we can see that there is a moderate amount of correlation between data types and all of the characteristics are spread reasonably well across the Yeast types. Here is a pairwise plot of all the data using the <code>GGally::ggpairs()</code> function.</p>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>In Class Activity</title>
+<title>Teaching Log</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,55 +23,20 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="in-class_files/libs/clipboard/clipboard.min.js"></script>
-<script src="in-class_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="in-class_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="in-class_files/libs/quarto-html/popper.min.js"></script>
-<script src="in-class_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="in-class_files/libs/quarto-html/anchor.min.js"></script>
-<link href="in-class_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="in-class_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="in-class_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="in-class_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="in-class_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="log_files/libs/clipboard/clipboard.min.js"></script>
+<script src="log_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="log_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="log_files/libs/quarto-html/popper.min.js"></script>
+<script src="log_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="log_files/libs/quarto-html/anchor.min.js"></script>
+<link href="log_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="log_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="log_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="log_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="log_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -84,7 +49,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">In Class Activity</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Teaching Log</h1>
 </div>
 
 
@@ -101,11 +66,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p>This in-class file is used for demonstrating individual examples related to this topic and is kept as a persistent record of examples provided during lectures.</p>
-<!-- -->
-
+<blockquote class="blockquote">
+<p>Daily updates on progress for the course in each section.</p>
+</blockquote>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2026-08-24</h2>
+<ul>
+<li><code>narrative.qmd</code>’s setup chunk has a commented-out <code>library(rgl)</code> block (3D plotting + <code>webgl</code> knitr hook) that was never re-enabled. Left disabled during this render pass because <code>rgl</code> requires the X11 subsystem, which isn’t available in this environment. <strong>TODO:</strong> either install XQuartz/X11 and re-enable this block, or replace the 3D visualization with a non-<code>rgl</code> alternative (e.g.&nbsp;<code>plotly</code>) that doesn’t need X11.</li>
+</ul>
+</section>
+<section id="copy-edit-log-ordination" class="level2">
+<h2 class="anchored" data-anchor-id="copy-edit-log-ordination">Copy-Edit Log — Ordination</h2>
+<p>Tracks copy-editing passes over this module’s <code>.qmd</code> documents. Clear-cut typos/grammar/spelling errors are corrected directly in the source. Items that need an author decision are left in place but wrapped in <code>&lt;mark&gt;...&lt;/mark&gt;</code> so they show up highlighted in the rendered HTML.</p>
+<section id="narrative.qmd-2026-08-15" class="level3">
+<h3 class="anchored" data-anchor-id="narrative.qmd-2026-08-15">narrative.qmd — 2026-08-15</h3>
+<section id="fixed-directly-typos-spelling-grammar" class="level4">
+<h4 class="anchored" data-anchor-id="fixed-directly-typos-spelling-grammar">Fixed directly (typos, spelling, grammar)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Line</th>
+<th>Issue</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>24</td>
+<td>“aquatic vegitation”</td>
+<td>“vegetation”</td>
+</tr>
+<tr class="even">
+<td>48</td>
+<td>“look a the data”</td>
+<td>“look at the data”</td>
+</tr>
+<tr class="odd">
+<td>48</td>
+<td>“there are a moderate amount” (agreement)</td>
+<td>“there is a moderate amount”</td>
+</tr>
+<tr class="even">
+<td>59</td>
+<td>“Principle Component Analyses” (heading)</td>
+<td>“Principal Component Analyses”</td>
+</tr>
+<tr class="odd">
+<td>61</td>
+<td>“Principle component analysis (PCA)”</td>
+<td>“Principal component analysis (PCA)”</td>
+</tr>
+<tr class="even">
+<td>62</td>
+<td>“The number of axes … are the same” (agreement)</td>
+<td>“is the same”</td>
+</tr>
+<tr class="odd">
+<td>65</td>
+<td>“orthoganal”</td>
+<td>“orthogonal”</td>
+</tr>
+<tr class="even">
+<td>66</td>
+<td>“those who explain the least” (non-human antecedent)</td>
+<td>“those that explain the least”</td>
+</tr>
+<tr class="odd">
+<td>68</td>
+<td>“exmaple”</td>
+<td>“example”</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>“2-dimenational” (image caption)</td>
+<td>“2-dimensional”</td>
+</tr>
+<tr class="odd">
+<td>91</td>
+<td>“underyling”</td>
+<td>“underlying”</td>
+</tr>
+<tr class="even">
+<td>99</td>
+<td>“coordiante”</td>
+<td>“coordinate”</td>
+</tr>
+<tr class="odd">
+<td>113</td>
+<td>“Non-metric Multiple Dimensional Scaling” (heading — not the standard name)</td>
+<td>“Non-metric Multidimensional Scaling”</td>
+</tr>
+<tr class="even">
+<td>132</td>
+<td><code>ISBN: ![978-0-471-88950-2](...)</code> — stray <code>!</code> turns the citation into a broken image embed instead of a link</td>
+<td><code>ISBN: [978-0-471-88950-2](...)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="flagged-for-your-review" class="level4">
+<h4 class="anchored" data-anchor-id="flagged-for-your-review">Flagged for your review</h4>
+<p>None — the rest of the document read cleanly.</p>
+</section>
+</section>
 </section>
 
 </main>
@@ -180,57 +248,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -560,20 +577,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "In Class Activity"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: false</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Examples</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This in-class file is used for demonstrating individual examples related to this topic and is kept as a persistent record of examples provided during lectures.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 
 
