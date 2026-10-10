@@ -101,16 +101,16 @@ ggMarginal( p, type="densigram")
 
 
 
-## &nbsp; {background-color="white" background-image="https://live.staticflickr.com/65535/51206415998_3527374bc2_c_d.jpg" background-size="initial" background-position="center"}
+## &nbsp; {background-color="white" background-image="media/flickr_51206415998.jpg" background-size="initial" background-position="center"}
 
-## &nbsp; {background-color="white" background-image="https://live.staticflickr.com/65535/51206210046_4cc91ca0ea_c_d.jpg" background-size="initial" background-position="center"}
+## &nbsp; {background-color="white" background-image="media/flickr_51206210046.jpg" background-size="initial" background-position="center"}
 
-## &nbsp; {background-color="white" background-image="https://live.staticflickr.com/65535/51206975949_e08e018ffe_c_d.jpg" background-size="initial" background-position="center"}
+## &nbsp; {background-color="white" background-image="media/flickr_51206975949.jpg" background-size="initial" background-position="center"}
 
-## &nbsp; {background-color="white" background-image="https://live.staticflickr.com/65535/51206975979_22ceef0be6_c_d.jpg" background-size="initial" background-position="center"}
+## &nbsp; {background-color="white" background-image="media/flickr_51206975979.jpg" background-size="initial" background-position="center"}
 
 <!-- 
-## &nbsp; {background-color="white" background-image="https://live.staticflickr.com/65535/51206994494_bcd4fb98c3_c_d.jpg" background-size="initial" background-position="center"}
+## &nbsp; {background-color="white" background-image="media/flickr_51206994494.jpg" background-size="initial" background-position="center"}
 --> 
 
 ## Creating Othoginal Data
@@ -314,7 +314,7 @@ A technique to build a representation of similarity between objects.
 :::
 
 ::: {.column width="50%"}
-![From www.nature.com/articles/s41467-020-20507-3](https://live.staticflickr.com/65535/51734955871_9c76562bd3_w_d.jpg)
+![From www.nature.com/articles/s41467-020-20507-3](media/from_www_nature_com_articles_s41467_020.jpg)
 :::
 
 ::::
@@ -333,7 +333,7 @@ A technique to build a representation of similarity between objects.
 
 ## &nbsp;
 
-![Help File for hclust](https://live.staticflickr.com/65535/51735192018_1444d8d533_o_d.png) 
+![Help File for hclust](media/help_file_for_hclust.png) 
 
 
 ## Visualizing From Distance Views
