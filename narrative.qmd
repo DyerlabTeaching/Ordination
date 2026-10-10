@@ -1,6 +1,6 @@
 ---
 title: "Ordination Techniques"
-format: html
+format: dyerlab-narrative-html
 ---
 
 Ordination is a technique to take high-dimensional data and to represent it in a lower dimensional context.  
@@ -26,7 +26,7 @@ One of the largest challenges in data analysis is the ability to understand and 
 For this activity, I am going to use the beer styles as a data set in explaining a couple of different types of ordination.  It is available as the raw CSV file.
 
 ```{r}
-url <- "https://raw.githubusercontent.com/dyerlab/ENVS-Lectures/master/data/Beer_Styles.csv"
+url <- "https://dyerlabteaching.github.io/CourseData/Miscellaneous/Beer_Styles.csv"
 read_csv( url ) |>
   mutate( Yeast = as.factor( Yeast ) ) -> data
 summary(data)

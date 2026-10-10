@@ -28,7 +28,7 @@ Methods for dimensional reductions.
 
 - [Slides](https://dyerlabteaching.github.io/Ordination/slides.html#/title-slide)
 - [Narrative](https://dyerlabteaching.github.io/Ordination/narrative.html)
-- [Data Set](https://raw.githubusercontent.com/DyerlabTeaching/Ordination/refs/heads/main/mv_genos.csv)
+- [Data Set](https://dyerlabteaching.github.io/CourseData/Genetic/mv_genos.csv)
 
 ## Assessment
 

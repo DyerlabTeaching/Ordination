@@ -1,6 +1,6 @@
 ---
 title: "In Class Activity - Ordination"
-format: html
+format: dyerlab-html
 ---
 
 ## Examples

@@ -2,7 +2,7 @@
 title: "Ordination"
 subtitle: ""
 author: Rodney Dyer, PhD
-format: revealjs
+format: dyerlab-revealjs
 ---
 
 ## Overall Impetus
@@ -122,10 +122,10 @@ The transformation you are doing is based upon applying a <font color="red">line
 
 ## Performing a Principal Component Rotation
 
-I've uploaded a copy of the `mv_genos.csv` file to Canvas that have the multivariate genotypes for 358 beetles from Baja California.
+The `mv_genos.csv` file in the course data repository has the multivariate genotypes for 363 beetles from Baja California.
 
 ```{r, echo=TRUE, eval=FALSE}
-data <- read_csv( "mv_genos.csv")
+data <- read_csv( "https://dyerlabteaching.github.io/CourseData/Genetic/mv_genos.csv")
 fit.pca <- princomp( data )
 names( fit.pca )
 ```
