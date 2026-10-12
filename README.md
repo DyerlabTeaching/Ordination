@@ -1,6 +1,10 @@
-# Ordination
+# Ordination Techniques
 
-![Photo by <a href="https://unsplash.com/@meinayin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Meina Yin</a> on <a href="https://unsplash.com/photos/white-ball-pendant-lights-vJzRM4nFovQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](https://unsplash.com/photos/vJzRM4nFovQ/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzMyMjA3OTk0fA&force=true&w=640)
+<!-- BEGIN module:header — generated from module.yml; edit that, not this -->
+
+![A small Mammillaria cactus in bloom in Baja California.](https://dyerlabteaching.github.io/Ordination/media/module_image.jpg)
+
+<!-- END module:header -->
 
 ## Impetus
 
@@ -26,9 +30,14 @@ Methods for dimensional reductions.
 
 ## Content
 
-- [Slides](https://dyerlabteaching.github.io/Ordination/slides.html#/title-slide)
-- [Narrative](https://dyerlabteaching.github.io/Ordination/narrative.html)
+<!-- BEGIN module:resources — generated from module.yml; edit that, not this -->
+
+- The [slides](https://dyerlabteaching.github.io/Ordination/slides.html) for this topic.
+- A longer [narrative](https://dyerlabteaching.github.io/Ordination/narrative.html) that goes into more depth.
+- An [in-class](https://dyerlabteaching.github.io/Ordination/in-class.html) activity.
 - [Data Set](https://dyerlabteaching.github.io/CourseData/Genetic/mv_genos.csv)
+
+<!-- END module:resources -->
 
 ## Assessment
 

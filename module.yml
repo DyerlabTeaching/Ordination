@@ -1,0 +1,12 @@
+title: "Ordination Techniques"
+repo: Ordination
+image:
+  file: media/module_image.jpg
+  alt: "A small Mammillaria cactus in bloom in Baja California."
+epigraph: >-
+  Ordination is a collective term for multivariate techniques which
+  summarize a multidimensional dataset in such a way that when it is
+  projected onto a low dimensional space, any intrinsic pattern the data
+  may possess becomes apparent upon visual inspection[^1].
+resources:
+  - "[Data Set](https://dyerlabteaching.github.io/CourseData/Genetic/mv_genos.csv)"

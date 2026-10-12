@@ -1,5 +1,5 @@
 project:
-  title: "Ordination"
+  title: "Ordination Techniques"
   output-dir: docs
   pre-render: _extensions/dyerlab/update-extension.sh
   resources:
