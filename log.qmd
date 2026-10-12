@@ -9,6 +9,10 @@ format: dyerlab-html
 
 - `narrative.qmd`'s setup chunk has a commented-out `library(rgl)` block (3D plotting + `webgl` knitr hook) that was never re-enabled. Left disabled during this render pass because `rgl` requires the X11 subsystem, which isn't available in this environment. **TODO:** either install XQuartz/X11 and re-enable this block, or replace the 3D visualization with a non-`rgl` alternative (e.g. `plotly`) that doesn't need X11.
 
+## 2026-10-12
+
+- **TODO:** Rendering `slides.qmd` warns that a literal `:::` was found in the document, meaning a fenced div isn't opened or closed properly. The likely culprit is the `:::` on the last line (≈397), right after the Peter Sellers gif on the closing "Questions" slide, which has no matching opener. Check whether it was meant to close a div (e.g. a `.middle`/centering wrapper) or should be deleted, then re-render and confirm the warning is gone.
+
 ## Copy-Edit Log — Ordination
 
 Tracks copy-editing passes over this module's `.qmd` documents. Clear-cut
