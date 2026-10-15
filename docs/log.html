@@ -2233,6 +2233,12 @@ vertical-align: -.125em;
 <li><code>narrative.qmd</code>’s setup chunk has a commented-out <code>library(rgl)</code> block (3D plotting + <code>webgl</code> knitr hook) that was never re-enabled. Left disabled during this render pass because <code>rgl</code> requires the X11 subsystem, which isn’t available in this environment. <strong>TODO:</strong> either install XQuartz/X11 and re-enable this block, or replace the 3D visualization with a non-<code>rgl</code> alternative (e.g. <code>plotly</code>) that doesn’t need X11.</li>
 </ul>
 </section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2026-10-12</h2>
+<ul>
+<li><strong>TODO:</strong> Rendering <code>slides.qmd</code> warns that a literal <code>:::</code> was found in the document, meaning a fenced div isn’t opened or closed properly. The likely culprit is the <code>:::</code> on the last line (≈397), right after the Peter Sellers gif on the closing “Questions” slide, which has no matching opener. Check whether it was meant to close a div (e.g. a <code>.middle</code>/centering wrapper) or should be deleted, then re-render and confirm the warning is gone.</li>
+</ul>
+</section>
 <section id="copy-edit-log-ordination" class="level2">
 <h2 class="anchored" data-anchor-id="copy-edit-log-ordination">Copy-Edit Log — Ordination</h2>
 <p>Tracks copy-editing passes over this module’s <code>.qmd</code> documents. Clear-cut typos/grammar/spelling errors are corrected directly in the source. Items that need an author decision are left in place but wrapped in <code>&lt;mark&gt;...&lt;/mark&gt;</code> so they show up highlighted in the rendered HTML.</p>
@@ -2800,37 +2806,41 @@ vertical-align: -.125em;
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`narrative.qmd`</span>&#39;s setup chunk has a commented-out <span class="in">`library(rgl)`</span> block (3D plotting + <span class="in">`webgl`</span> knitr hook) that was never re-enabled. Left disabled during this render pass because <span class="in">`rgl`</span> requires the X11 subsystem, which isn&#39;t available in this environment. **TODO:** either install XQuartz/X11 and re-enable this block, or replace the 3D visualization with a non-<span class="in">`rgl`</span> alternative (e.g. <span class="in">`plotly`</span>) that doesn&#39;t need X11.</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Copy-Edit Log — Ordination</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2026-10-12</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Tracks copy-editing passes over this module&#39;s <span class="in">`.qmd`</span> documents. Clear-cut</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>typos/grammar/spelling errors are corrected directly in the source. Items</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>that need an author decision are left in place but wrapped in</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;mark&gt;...&lt;/mark&gt;`</span> so they show up highlighted in the rendered HTML.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### narrative.qmd — 2026-08-15</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Fixed directly (typos, spelling, grammar)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**TODO:** Rendering <span class="in">`slides.qmd`</span> warns that a literal <span class="in">`:::`</span> was found in the document, meaning a fenced div isn&#39;t opened or closed properly. The likely culprit is the <span class="in">`:::`</span> on the last line (≈397), right after the Peter Sellers gif on the closing &quot;Questions&quot; slide, which has no matching opener. Check whether it was meant to close a div (e.g. a <span class="in">`.middle`</span>/centering wrapper) or should be deleted, then re-render and confirm the warning is gone.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Copy-Edit Log — Ordination</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Tracks copy-editing passes over this module&#39;s <span class="in">`.qmd`</span> documents. Clear-cut</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>typos/grammar/spelling errors are corrected directly in the source. Items</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>that need an author decision are left in place but wrapped in</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">`&lt;mark&gt;...&lt;/mark&gt;`</span> so they show up highlighted in the rendered HTML.</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Line <span class="pp">|</span> Issue <span class="pp">|</span> Fix <span class="pp">|</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 24 <span class="pp">|</span> &quot;aquatic vegitation&quot; <span class="pp">|</span> &quot;vegetation&quot; <span class="pp">|</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 48 <span class="pp">|</span> &quot;look a the data&quot; <span class="pp">|</span> &quot;look at the data&quot; <span class="pp">|</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 48 <span class="pp">|</span> &quot;there are a moderate amount&quot; (agreement) <span class="pp">|</span> &quot;there is a moderate amount&quot; <span class="pp">|</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 59 <span class="pp">|</span> &quot;Principle Component Analyses&quot; (heading) <span class="pp">|</span> &quot;Principal Component Analyses&quot; <span class="pp">|</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 61 <span class="pp">|</span> &quot;Principle component analysis (PCA)&quot; <span class="pp">|</span> &quot;Principal component analysis (PCA)&quot; <span class="pp">|</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 62 <span class="pp">|</span> &quot;The number of axes ... are the same&quot; (agreement) <span class="pp">|</span> &quot;is the same&quot; <span class="pp">|</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 65 <span class="pp">|</span> &quot;orthoganal&quot; <span class="pp">|</span> &quot;orthogonal&quot; <span class="pp">|</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 66 <span class="pp">|</span> &quot;those who explain the least&quot; (non-human antecedent) <span class="pp">|</span> &quot;those that explain the least&quot; <span class="pp">|</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 68 <span class="pp">|</span> &quot;exmaple&quot; <span class="pp">|</span> &quot;example&quot; <span class="pp">|</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 70 <span class="pp">|</span> &quot;2-dimenational&quot; (image caption) <span class="pp">|</span> &quot;2-dimensional&quot; <span class="pp">|</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 91 <span class="pp">|</span> &quot;underyling&quot; <span class="pp">|</span> &quot;underlying&quot; <span class="pp">|</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 99 <span class="pp">|</span> &quot;coordiante&quot; <span class="pp">|</span> &quot;coordinate&quot; <span class="pp">|</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 113 <span class="pp">|</span> &quot;Non-metric Multiple Dimensional Scaling&quot; (heading — not the standard name) <span class="pp">|</span> &quot;Non-metric Multidimensional Scaling&quot; <span class="pp">|</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 132 <span class="pp">|</span> <span class="in">`ISBN: ![978-0-471-88950-2](...)`</span> — stray <span class="in">`!`</span> turns the citation into a broken image embed instead of a link <span class="pp">|</span> <span class="in">`ISBN: [978-0-471-88950-2](...)`</span> <span class="pp">|</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Flagged for your review</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>None — the rest of the document read cleanly.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### narrative.qmd — 2026-08-15</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Fixed directly (typos, spelling, grammar)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Line <span class="pp">|</span> Issue <span class="pp">|</span> Fix <span class="pp">|</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 24 <span class="pp">|</span> &quot;aquatic vegitation&quot; <span class="pp">|</span> &quot;vegetation&quot; <span class="pp">|</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 48 <span class="pp">|</span> &quot;look a the data&quot; <span class="pp">|</span> &quot;look at the data&quot; <span class="pp">|</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 48 <span class="pp">|</span> &quot;there are a moderate amount&quot; (agreement) <span class="pp">|</span> &quot;there is a moderate amount&quot; <span class="pp">|</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 59 <span class="pp">|</span> &quot;Principle Component Analyses&quot; (heading) <span class="pp">|</span> &quot;Principal Component Analyses&quot; <span class="pp">|</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 61 <span class="pp">|</span> &quot;Principle component analysis (PCA)&quot; <span class="pp">|</span> &quot;Principal component analysis (PCA)&quot; <span class="pp">|</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 62 <span class="pp">|</span> &quot;The number of axes ... are the same&quot; (agreement) <span class="pp">|</span> &quot;is the same&quot; <span class="pp">|</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 65 <span class="pp">|</span> &quot;orthoganal&quot; <span class="pp">|</span> &quot;orthogonal&quot; <span class="pp">|</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 66 <span class="pp">|</span> &quot;those who explain the least&quot; (non-human antecedent) <span class="pp">|</span> &quot;those that explain the least&quot; <span class="pp">|</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 68 <span class="pp">|</span> &quot;exmaple&quot; <span class="pp">|</span> &quot;example&quot; <span class="pp">|</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 70 <span class="pp">|</span> &quot;2-dimenational&quot; (image caption) <span class="pp">|</span> &quot;2-dimensional&quot; <span class="pp">|</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 91 <span class="pp">|</span> &quot;underyling&quot; <span class="pp">|</span> &quot;underlying&quot; <span class="pp">|</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 99 <span class="pp">|</span> &quot;coordiante&quot; <span class="pp">|</span> &quot;coordinate&quot; <span class="pp">|</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 113 <span class="pp">|</span> &quot;Non-metric Multiple Dimensional Scaling&quot; (heading — not the standard name) <span class="pp">|</span> &quot;Non-metric Multidimensional Scaling&quot; <span class="pp">|</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 132 <span class="pp">|</span> <span class="in">`ISBN: ![978-0-471-88950-2](...)`</span> — stray <span class="in">`!`</span> turns the citation into a broken image embed instead of a link <span class="pp">|</span> <span class="in">`ISBN: [978-0-471-88950-2](...)`</span> <span class="pp">|</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Flagged for your review</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>None — the rest of the document read cleanly.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
