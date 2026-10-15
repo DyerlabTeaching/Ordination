@@ -48,8 +48,8 @@ Excellent.  If we look at the data now, we can see that there is a moderate amou
 
 ```{r message=FALSE, warning=FALSE}
 library(GGally)
-beers %>%
-  select( -Styles ) %>%
+beers |>
+  select( -Styles ) |>
   ggpairs() 
 ```
 
@@ -97,7 +97,7 @@ So, the first axis describes 63% of the variation and the second describes 31%, 
 We can plot the original data points, projected into this new coordinate space.
 
 ```{r}
-data.frame( predict( pc.fit )) %>%
+data.frame( predict( pc.fit )) |>
   mutate( Yeast = beers$Yeast, 
           Style = beers$Styles ) -> predicted
 
@@ -117,9 +117,9 @@ Here is an example using the beer styles dataset.
 
 ```{r}
 library( vegan )
-beers %>%
-  select( -Styles, -Yeast ) %>%
-  metaMDS( trace = FALSE ) %>%
+beers |>
+  select( -Styles, -Yeast ) |>
+  metaMDS( trace = FALSE ) |>
   ordiplot( )
 ```
 

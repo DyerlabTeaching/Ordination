@@ -82,10 +82,10 @@ Consider the following data
 #| echo: false
 library( tidyverse )
 library( ggExtra )
-data.frame( X = rnorm( 51, mean=12, sd = 3)) %>%
+data.frame( X = rnorm( 51, mean=12, sd = 3)) |>
   mutate( Y = (3.2*X + rnorm(51, sd=4)) - 20) -> df
 
-df %>%
+df |>
   ggplot( aes(X,Y) ) + 
   geom_point() +
   theme_minimal(base_size=14) -> p 
@@ -239,7 +239,7 @@ data.frame( Axis = 1:length(x),
 ## Visualizing
 
 ```{r eval=FALSE}
-predict( fit.pca ) %>% data.frame() %>% 
+predict( fit.pca ) |> data.frame() |> 
   mutate( Species = arapat$Species) -> pred.pca 
 ggplot( pred.pca, aes(Comp.1,Comp.2,color=Species) ) + 
   geom_point()  +  theme( legend.position = "none")
@@ -247,8 +247,8 @@ ggplot( pred.pca, aes(Comp.1,Comp.2,color=Species) ) +
 
 
 ```{r echo=FALSE}
-predict( fit.pca ) %>%
-  data.frame() %>%
+predict( fit.pca ) |>
+  data.frame() |>
   mutate( Species = arapat$Species) -> pred.pca 
 ggplot( pred.pca, aes(Comp.1,Comp.2,color=Species) ) + 
   geom_point()  + 
