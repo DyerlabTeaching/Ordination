@@ -54,7 +54,7 @@ beers |>
 ```
 
 
-## Principal Component Analyses
+## Principal Component Analyses {.theory .application}
 
 Principal component analysis (PCA) is a translation of the original data into new coordinate spaces.  This has absolutely nothing to do with the relationship among the data themselves but is more of a way to create new coordinates for each data point under the following criteria:  
 1. The number of axes in the translated data is the same as the number of axes in the original data.
@@ -107,7 +107,7 @@ ggplot( predicted ) +
 ```
 
 
-## Non-metric Multidimensional Scaling (NMDS)
+## Non-metric Multidimensional Scaling (NMDS) {.theory .application}
 
 Nonmetric Multidimensional Scaling (NMDS) is a robust, iterative ordination technique used in community ecology and multivariate statistics to visualize dissimilarities among samples in a reduced-dimensional space. Unlike metric approaches such as Principal Components Analysis (PCA), which assume linear relationships and preserve Euclidean distances, NMDS is **non-parametric** and relies on the rank order of distances. This makes it particularly effective for ecological datasets characterized by non-normal distributions, high numbers of zeros, and non-linear species responses. The goal of NMDS is to collapse information from multiple variables—often species abundances—into a two- or three-dimensional map where the distance between points reflects their biotic or abiotic similarity as closely as possible.
 
