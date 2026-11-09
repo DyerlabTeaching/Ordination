@@ -219,8 +219,8 @@ dbl (10): ABV_Min, ABV_Max, IBU_Min, IBU_Max, SRM_Min, SRM_Max, OG_Min, OG_M...
 </div>
 </div>
 </div>
-<section id="principal-component-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="principal-component-analyses">Principal Component Analyses</h2>
+<section id="principal-component-analyses" class="level2 theory application">
+<h2 class="theory application anchored" data-anchor-id="principal-component-analyses">Principal Component Analyses</h2>
 <p>Principal component analysis (PCA) is a translation of the original data into new coordinate spaces. This has absolutely nothing to do with the relationship among the data themselves but is more of a way to create new coordinates for each data point under the following criteria:<br>
 1. The number of axes in the translated data is the same as the number of axes in the original data. 2. Axes are chosen by taking all the data and finding transects through it that account for the broadest variation in the data. 3. Each axis is defined as a linear combination of the original axes. 3. Subsequent axes <em>must be</em> orthogonal to all previous ones (e.g., at 90<span class="math inline">\(\deg\)</span> angles). 4. The amount of the total variation in the system can be partitioned by these new axes and they are ordered from those that explain the most variation to those that explain the least.</p>
 <p>An example of this rotation is given below.</p>
@@ -290,8 +290,8 @@ FG  0.0001261491 -0.0001705335 -0.001548091  5.531911e-01 -8.330529e-01</code></
 </div>
 </div>
 </section>
-<section id="non-metric-multidimensional-scaling-nmds" class="level2">
-<h2 class="anchored" data-anchor-id="non-metric-multidimensional-scaling-nmds">Non-metric Multidimensional Scaling (NMDS)</h2>
+<section id="non-metric-multidimensional-scaling-nmds" class="level2 theory application">
+<h2 class="theory application anchored" data-anchor-id="non-metric-multidimensional-scaling-nmds">Non-metric Multidimensional Scaling (NMDS)</h2>
 <p>Nonmetric Multidimensional Scaling (NMDS) is a robust, iterative ordination technique used in community ecology and multivariate statistics to visualize dissimilarities among samples in a reduced-dimensional space. Unlike metric approaches such as Principal Components Analysis (PCA), which assume linear relationships and preserve Euclidean distances, NMDS is <strong>non-parametric</strong> and relies on the rank order of distances. This makes it particularly effective for ecological datasets characterized by non-normal distributions, high numbers of zeros, and non-linear species responses. The goal of NMDS is to collapse information from multiple variables—often species abundances—into a two- or three-dimensional map where the distance between points reflects their biotic or abiotic similarity as closely as possible.</p>
 <p>The configuration is achieved by minimizing a “stress” value, a goodness-of-fit metric that represents the mismatch between the ranks of the distances in the original high-dimensional space and the ranks in the final ordination. Because NMDS is not an eigenvalue-based method, the axes are arbitrary and do not explain a specific percentage of variance; instead, the entire configuration is rotated to maximize the variance explained by the first axis for interpretability. Successful NMDS requires careful selection of an appropriate distance measure (such as Bray-Curtis) and multiple restarts from different random configurations to avoid being trapped in local stress minima.</p>
 <p>Here is an example using the beer styles dataset.</p>
